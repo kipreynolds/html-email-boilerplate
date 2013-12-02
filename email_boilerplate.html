@@ -11,52 +11,67 @@
 	<style type="text/css">
 		/* Mobile Adjust */
         @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
-        	/* General Width Resets */
-        	@-ms-viewport {width: 320px !important;}
-            td[class=mobile] {font-size:18px !important; line-height:24px !important;}
+        	/* Width Resets */
+        	table[id=content-wrap] {width: 100% !important;}
+        	table[class=columnContainer] {width: 100% !important; background-color: #ffffff;}
+        	
+        	/* Text Resets */
+            td[class=txt18px] {font-size: 18px !important; line-height: 24px !important;}
 
             /* Hide from Mobile */
-			table[class=hide] {display:none !important; width:0px !important; max-height: 0px !important; line-height: 0px !important; padding:0 !important; mso-hide:all !important;}
+			table[class=hide] {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
         }
 		
 		/* General Email Resets */
 		html {-webkit-font-smoothing: antialiased;}
-		body{-webkit-font-smoothing: antialiased; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; mso-line-height-rule: exactly; width:100%; margin:0; padding:0; font-family: Arial,Verdana,sans-serif;} /* Prevent text re-size and maintains height and width */
-		.ReadMsgBody{width:100%;} /* Force Outlook.com to display emails at full width */
-		.ExternalClass {width:100%;} /* Force Outlook.com to display emails at full width */
+		body{width:100% !important; height: 100% !important; margin:0; padding:0; background-color: #ebebeb; font-family: Arial,Verdana,sans-serif; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; } /* Prevent text re-size and maintains height and width */
+		.ReadMsgBody{width: 100%;} /* Force Outlook.com to display emails at full width */
+		.ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
 		.ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
 		.ExternalClass span, .ExternalClass td, .ExternalClass p {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-		img{-ms-interpolation-mode:bicubic; border:0; line-height:100%; outline:none; text-decoration:none;}
-		a img { border:none; }
-        table[class=wrap] {width:100% !important; margin:0; padding:0; text-align:center;}
-        table[class=content-wrap] {width:600px; max-width: 600px; text-align:left;}
-        table, td {border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; mso-line-height-rule: exactly;}
-        a:visited, a:active, a:link, a:hover {text-decoration:underline; color:#009946;} /* Font color can be changed */
-        p {margin:0; padding:0;}
-        span[class=appleLinkGrey] a {text-decoration:none; color:#999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
-
-		/* Hide Desktop */
-		table[class=hide] {display:none !important; width:0px !important; max-height: 0px !important; line-height: 0px !important; padding:0 !important; mso-hide:all !important;}
+		img{-ms-interpolation-mode: bicubic; border: none; outline: none;}
+		a img {border: none; text-decoration: none;}
+        table[id=wrap] {width: 100% !important; height: 100% !important; margin: 0; padding: 0; text-align: center;}
+        table[id=content-wrap] {width: 600px; max-width: 600px; text-align: left;}
+        table, td {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly;}
+        a:visited, a:active, a:link, a:hover {text-decoration: underline; color: #009946;} /* Font color can be changed */
+        p {margin: 0; padding: 0;}
+        span[class=appleLinkGrey] a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
 	</style>
 </head>
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="width:100%; margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; -webkit-font-smoothing: antialiased; mso-line-height-rule: exactly; font-family: Arial,Verdana,sans-serif;">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ebebeb" style="width: 100% !important; height: 100% !important; margin: 0; padding: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing: antialiased; mso-line-height-rule: exactly; background-color: #ebebeb; font-family: Arial,Verdana,sans-serif;">
 	<center>
 	<!-- // Email Body Wrap -->
-	<table class="wrap" border="0" cellpadding="0" cellspacing="0" style="width:100% !important; margin:0; padding:0; text-align:center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+	<table id="wrap" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" style="width: 100% !important; height: 100% !important; margin: 0; padding: 0; text-align: center; background-color:#ebebeb; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 		<tr>
 			<td align="center" valign="top">
 				<!-- // Content Wrap -->
-				<table class="content-wrap" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px; max-width:600px; text-align:left; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+				<table id="content-wrap" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width: 600px; max-width: 600px; text-align: left; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 					<tr>
-						<td width="600" valign="top">
+						<td valign="top" align="center">
 							<!-- // Preheader -->
-							<table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+							<table border="0" cellpadding="8" cellspacing="0" width="100%" class="hide" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 								<tr>
-									<td valign="top" align="left">Boilerplate Email Template Preheader</td>
-									<td valign="top" align="right"><a href="#" style="text-decoration:underline; color:#000001;" target="_blank">View in your browser</a>&nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="#" style="text-decoration:underline; color:#000001;" target="_blank">Unsubscribe</a></td>
+									<td valign="top" align="left"><span style="font-size: 12px; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000001;">Boilerplate Email Template Preheader</span></td>
+									<td valign="top" align="right"><span style="font-size: 12px; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000001;"><a href="#" style="text-decoration:underline; color:#000001; white-space: nowrap;" target="_blank">View in your browser</a>  &#124;  <a href="#" style="text-decoration:underline; color:#000001;" target="_blank">Unsubscribe</a></span></td>
 								</tr>
 							</table>
 							<!-- Preheader \\ -->
+							<!-- // Body Content -->
+							<table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" class="columnContainer" style="max-width: 600px; background-color: #ffffff; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+								<tr>
+									<td valign="top" align="center" bgcolor="#ffffff">
+										<table border="0" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff" style="max-width: 600px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+											<tr>
+												<td valign="top" align="center">
+													<span style="font-size: 16px; line-height: 20px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<!-- Body Content \\ -->
 						</td>
 					</tr>
 				</table>
