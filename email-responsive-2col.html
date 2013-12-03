@@ -20,12 +20,15 @@
 			/* Images */
 			img {width: 100% !important; height: auto !important;}
 			img[class=heroImage] {width: 100% !important; height: auto !important; max-width: 580px !important;}
+			
+			/* Button */
+			a[class=button] {width: 75% !important;}
         	
         	/* Text Resets */
             td[class=mobile] {font-size: 18px !important; line-height: 24px !important;}
 
             /* Hide from Mobile */
-			table[class=hide] {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
+			table[class=hide] {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important; color: #03602c}
         }
 		
 		/* General Email Resets */
@@ -43,6 +46,7 @@
         a:visited, a:active, a:link, a:hover {text-decoration: underline; color: #009946;} /* Font color can be changed */
         p {margin: 0; padding: 0;}
         span[class=appleLinkGrey] a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
+        a[class=button]:hover {background-color: #0b8843 !important;}
 	</style>
 </head>
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#666666" style="width: 100% !important; height: 100% !important; margin: 0; padding: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing: antialiased; mso-line-height-rule: exactly; background-color: #666666; font-family: Arial,Verdana,sans-serif;">
@@ -99,16 +103,20 @@
 													<table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 														<tr>
 															<td valign="top" align="center">
-																<table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-																	<tr>
-																		<td valign="top" align="center" bgcolor="#999999">
-																			<span style="font-size: 20px; line-height: 26px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Column Content 1</span>
-																		</td>
-																	</tr>
-																	<tr>
-																		<td valign="top" align="center" style="padding-top: 10px;"><span style="font-size: 15px; line-height: 19px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></td>
-																	</tr>
-																</table>
+																<span style="font-size: 20px; line-height: 26px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Column Content 1</span>
+																<br />
+																<span style="font-size: 15px; line-height: 19px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+															</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center">
+																<!--[if mso]>
+																	<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:175px;" arcsize="13%" strokecolor="#03602c" fillcolor="#009946">
+																	<w:anchorlock/><center style="color:#ebebeb;font-family:sans-serif;font-size:18px;font-weight:bold;">Read More</center>
+																	</v:roundrect>
+																	<![endif]--><![if !mso]>
+																<a class="button" href="#" style="background-color: #009946; border-top:1px; border-top-color:#03602c; border-right:1px; border-right-color:#03602c; border-bottom:3px; border-bottom-color:#03602c; border-left:1px; border-left-color:#03602c; border-style:solid; border-radius: 5px; display: inline-block; font-size: 18px; line-height:40px; font-family: Arial,Verdana,sans-serif; color: #ebebeb; text-align:center; text-shadow: 1px 1px #666666; text-decoration: none; font-weight: bold; width: 175px;">Read More</a>
+																<![endif]>
 															</td>
 														</tr>
 													</table>
@@ -117,20 +125,27 @@
 													<table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 														<tr>
 															<td valign="top" align="center">
-																<table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-																	<tr>
-																		<td valign="top" align="center" bgcolor="#999999">
-																			<span style="font-size: 20px; line-height: 26px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Column Content 2</span>
-																		</td>
-																	</tr>
-																	<tr>
-																		<td valign="top" align="center" style="padding-top: 10px;"><span style="font-size: 15px; line-height: 19px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></td>
-																	</tr>
-																</table>
+																<span style="font-size: 20px; line-height: 26px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Column Content 2</span>
+																<br />
+																<span style="font-size: 15px; line-height: 19px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+															</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center">
+																<!--[if mso]>
+																	<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:175px;" arcsize="13%" strokecolor="#03602c" fillcolor="#009946">
+																	<w:anchorlock/><center style="color:#ebebeb;font-family:sans-serif;font-size:18px;font-weight:bold;">Read More</center>
+																	</v:roundrect>
+																	<![endif]--><![if !mso]>
+																<a class="button" href="#" style="background-color: #009946; border-top:1px; border-top-color:#03602c; border-right:1px; border-right-color:#03602c; border-bottom:3px; border-bottom-color:#03602c; border-left:1px; border-left-color:#03602c; border-style:solid; border-radius: 5px; display: inline-block; font-size: 18px; line-height:40px; font-family: Arial,Verdana,sans-serif; color: #ebebeb; text-align:center; text-shadow: 1px 1px #666666; text-decoration: none; font-weight: bold; width: 175px;">Read More</a>
+																<![endif]>
 															</td>
 														</tr>
 													</table>
 												</td>
+											</tr>
+											<tr>
+												<td colspan="2" class="vertSpacer" height="20" style="font-size:20px; line-height:20px;">&nbsp;</td>
 											</tr>
 										</table>
 										<!-- Body Content \\ -->
