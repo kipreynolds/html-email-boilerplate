@@ -3,24 +3,27 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>HTML Email Boilerplate</title>
 	<style type="text/css">
 		/* == Client Resets == */
+		#outlook a {padding: 0;}
 		.ReadMsgBody{width: 100%;} /* Force Outlook.com to display emails at full width */
 		.ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
 		.ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
-		.ExternalClass span, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-		.appleLinkGrey a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
-		
-		/* == Email Resets == */
-		body {width:100%; min-width: 100%; margin:0; padding:0; background-color: #ebebeb; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly;} /* Prevent text re-size and maintains height and width */
-		table, td {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
-		img {border: 0; outline: none; -ms-interpolation-mode: bicubic;}
+		.ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
+		body, table, td, a {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+		table {border-collapse: collapse;}
+		table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+		img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
 		a img {text-decoration: none;}
 		a:visited, a:active, a:link, a:hover {text-decoration: underline; color: #009946;} /* Font color can be changed */
         p, div {margin: 0; padding: 0;}
+        body {width:100% !important; min-width: 100%; margin:0; padding:0;} /* Maintains height and width */
+		.appleLinkGrey a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
 		
 		/* == General Styles == */
+		body {background-color: #ebebeb;}
         #bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb;}
         #bodyCell {padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;}
         #emailWrap {width: 600px; min-width: 600px; text-align: left;}
