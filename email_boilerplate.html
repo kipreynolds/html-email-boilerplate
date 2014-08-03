@@ -12,24 +12,24 @@
 		.ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
 		.ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
 		.ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-		body, table, td, a {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+		body {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 		table {border-collapse: collapse;}
 		table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
 		img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
 		a img {text-decoration: none;}
-		a:visited, a:active, a:link, a:hover {text-decoration: underline; color: #009946;} /* Font color can be changed */
+		a:visited, a:active, a:link, a:hover {text-decoration: none; color: #009946;} /* Font color can be changed */
         p, div {margin: 0; padding: 0;}
-        body {width:100% !important; min-width: 100%; margin:0; padding:0;} /* Maintains height and width */
+        body {width:100% !important; min-width: 100%; margin:0; padding:0;} /* Maintains width */
 		.appleLinkGrey a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
 		
 		/* == General Styles == */
 		body {background-color: #ebebeb;}
-        #bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb;}
-        #bodyCell {padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;}
+        #bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+        #bodyCell {padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 30px;}
         #emailWrap {width: 600px; min-width: 600px; text-align: left;}
         .columnContainer {width: 600px; min-width: 600px;}
-        .preheader {padding-right: 5px; padding-bottom: 5px; padding-left: 5px; font-size: 13px; line-height: 18px; font-family: Arial,Verdana,sans-serif; color: #000001;}
-        .Paragraph {padding: 10px; font-size: 16px; line-height: 21px; font-family: Arial,Verdana,sans-serif; color: #000001;}
+        .preheader {padding-right: 5px; padding-bottom: 5px; padding-left: 5px; font-size: 12px; line-height: 17px; font-family: Arial,Verdana,sans-serif; color: #000001;}
+        .copyBlock {padding: 10px; font-size: 16px; line-height: 21px; font-family: Arial,Verdana,sans-serif; color: #000001;}
         
         /* == Mobile Adjust == */
         @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
@@ -69,7 +69,7 @@
 									<td valign="top" align="center">
 										<table border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tr>
-												<td class="Paragraph" valign="top" align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+												<td class="copyBlock" valign="top" align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
 											</tr>
 										</table>
 									</td>
