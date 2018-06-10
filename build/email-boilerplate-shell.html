@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
+	<meta name="x-apple-disable-message-reformatting" />
+	<!--[if gte mso 9]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]-->
+	<title>HTML Email Boilerplate</title>
+	<style type="text/css">
+		/* == Client Resets == */
+		#outlook a {padding: 0;}
+		.ReadMsgBody, .ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
+		.ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
+		.ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
+		body {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+		table {border-collapse: collapse;}
+		table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+		img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
+		a img {text-decoration: none; border: 0;}
+		a:visited, a:active, a:link, a:hover {text-decoration: none; color: #bd262f;} /* Font color can be changed */
+    H1, H2, H3, H4, H5, p, div, body {Margin: 0; padding: 0;}
+    body {width:100% !important; min-width: 100%;} /* Maintains width */
+		/* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
+		.appleLinkGrey a {text-decoration: none; color: #999999;}
+		.appleLinkRed a {text-decoration: none; color: #bd262f;}
+		.appleLinkWhite a {text-decoration: none; color: #ffffff;}
+		
+		/* == General Styles == */
+		body {background-color: #ebebeb;}
+		#bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+		#bodyCell {padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 30px;}
+		#emailWrap {width: 600px; min-width: 600px; text-align: left;}
+		.columnContainer {width: 600px; min-width: 600px;}
+		.preheader {padding-right: 5px; padding-bottom: 5px; padding-left: 5px; font-size: 12px; line-height: 17px; font-family: Arial,Verdana,sans-serif; color: #000001;}
+		.copyBlock {padding: 10px; font-size: 16px; line-height: 21px; font-family: Arial,Verdana,sans-serif; color: #000001;}
+        
+		/* == Mobile Adjust == */
+		@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+			/* Width Resets */
+			#emailWrap {width: 100% !important; min-width: 100% !important;}
+			.columnContainer {width: 100% !important; min-width: 100% !important;}
+
+			/* Spacing Resets */
+			.padL-0 {padding-left: 0px!important;}
+			.padL-5 {padding-left: 5px!important;}
+			.padL-10 {padding-left: 10px!important;}
+			.padL-15 {padding-left: 15px!important;}
+			.padL-20 {padding-left: 20px!important;}
+			.padL-25 {padding-left: 25px!important;}
+			.padL-30 {padding-left: 30px!important;}
+			.padL-35 {padding-left: 35px!important;}
+			.padR-0 {padding-right: 0px!important;}
+			.padR-5 {padding-right: 5px!important;}
+			.padR-10 {padding-right: 10px!important;}
+			.padR-15 {padding-right: 15px!important;}
+			.padR-20 {padding-right: 20px!important;}
+			.padR-25 {padding-right: 25px!important;}
+			.padR-30 {padding-right: 30px!important;}
+			.padR-35 {padding-right: 35px!important;}
+			
+			/* Text Resets */
+			.txt18px {font-size: 18px !important; line-height: 24px !important;}
+
+			/* Hide from Mobile */
+			.mHide {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
+    }
+	</style>
+
+	<!--[if gte mso 9]>
+	<xml>
+	  <o:OfficeDocumentSettings>
+	    <o:AllowPNG/>
+	    <o:PixelsPerInch>96</o:PixelsPerInch>
+	 </o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ebebeb" width="100%">
+	<center>
+	<!-- // Email Body Wrap -->
+	<table id="bodyWrap" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" width="100%">
+		<tr>
+      <td id="bodyCell" align="center" valign="top">
+      <!-- // Content Wrap -->
+        				<table id="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" width="600">
+					<tr>
+						<td valign="top" align="center">
+							<!-- // Preheader -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mHide">
+								<tr>
+									<td class="preheader" valign="top" align="left">Boilerplate Email Template Preheader</td>
+                  <td class="preheader" valign="top" align="right"><a href="#" style="text-decoration:underline; color:#000001; white-space: nowrap;" target="_blank">View in your browser</a>&nbsp; &#124; &nbsp;<a href="#" style="text-decoration:underline; color:#000001;" target="_blank">Unsubscribe</a>
+                  </td>
+								</tr>
+							</table>
+							<!-- Preheader \\ -->
+							<!-- // Body Content -->
+							<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="600" class="columnContainer">
+								<tr>
+									<td valign="top" align="center">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tr>
+												<td class="copyBlock" valign="top" align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ratione omnis quisquam nisi, quidem nobis, animi perferendis atque laboriosam ducimus eveniet. Eos voluptatibus, sit id aut excepturi, corrupti accusantium ratione.</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<!-- Body Content \\ -->
+						</td>
+					</tr>
+				</table>
+				
+      <!-- Content Wrap \\ -->
+			</td>
+		</tr>
+	</table>
+	<!-- Email Body Wrap \\ -->
+	</center>
+</body>
+</html>
