@@ -1,110 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<!-- Facebook Open Graph Meta Tags -->
-	<meta property="og:title" content="title of the page"/>
-	<meta property="og:image" content="url to image"/>
-	<meta property="og:description" content="email description"/>
 	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
-	<title>HTML Email Boilerplate</title>
+	<meta name="x-apple-disable-message-reformatting" />
+	<!--[if gte mso 9]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]-->
+	<title>HTML Email Starter Shell</title>
 	<style type="text/css">
-		/* Mobile Adjust */
-        @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
-        	/* Width Resets */
-        	table[id=contentWrap] {width: 100% !important;}
-        	table[class=columnContainer] {width: 100% !important;}
-        	td[class=columnSingle] {width: 100% !important; display: block;}
-			table[class=footerContainer] {width: 100% !important;}
-			
-			/* Images */
-			img {width: 100% !important; height: auto !important;}
-			img[class=heroImage] {width: 100% !important; height: auto !important; max-width: 580px !important;}
-			
-			/* Button */
-			a[class=button] {width: 75% !important;}
-        	
-        	/* Text Resets */
-            td[class=mobile] {font-size: 18px !important; line-height: 24px !important;}
-            
-            /* Padding Resets */
-            td[class=paddingTop25] {padding-top: 25px !important;}
+  /* == Client Resets == */
+  #outlook a {padding: 0;}
+  .ReadMsgBody, .ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
+  .ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
+  .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
+  body {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+  table {border-collapse: collapse;}
+  table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+  img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
+  a img {text-decoration: none; border: 0;}
+  a:visited, a:active, a:link, a:hover {text-decoration: none; color: #bd262f;} /* Font color can be changed */
+  H1, H2, H3, H4, H5, p, div, body {Margin: 0; padding: 0;}
+  body {width:100% !important; min-width: 100%;} /* Maintains width */
+  /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
+  .appleLinkGrey a {text-decoration: none; color: #999999;}
+  .appleLinkRed a {text-decoration: none; color: #bd262f;}
+  .appleLinkWhite a {text-decoration: none; color: #ffffff;}
+</style>
+	<style type="text/css">
+  /* == General Styles == */
+  body {background-color: #ebebeb;}
+  .bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+  .bodyWrapCell {padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 30px;}
+  .emailWrap {width: 620px; min-width: 620px; text-align: left;}
+  .rowContainer {width: 620px; min-width: 620px;}
+</style> 
+	<style type="text/css">
+  /* == Mobile Styles == */
+  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    /* Width Resets */
+    #emailWrap {width: 100% !important; min-width: 100% !important;}
+    .columnContainer {width: 100% !important; min-width: 100% !important;}
+    .image100p {width: 100% !important; min-width: 100% !important; height: auto !important;}
 
-            /* Hide from Mobile */
-			table[class=hide] {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important; color: #03602c}
-        }
-		
-		/* General Email Resets */
-		html {-webkit-font-smoothing: antialiased;}
-		body{width:100%; margin:0; padding:0; font-family: Arial,Verdana,sans-serif; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; } /* Prevent text re-size and maintains height and width */
-		.ReadMsgBody{width: 100% !important;} /* Force Outlook.com to display emails at full width */
-		.ExternalClass {width: 100% !important;} /* Force Outlook.com to display emails at full width */
-		.ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
-		.ExternalClass span, .ExternalClass td, .ExternalClass p {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-		img{-ms-interpolation-mode: bicubic; border: none; outline: none;}
-		a img {border: none; text-decoration: none;}
-        table[id=wrap] {width: 100% !important; margin: 0; padding: 0; text-align: center;}
-        table[id=contentWrap] {width: 600px; max-width: 600px; text-align: left;}
-        table, td {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly;}
-        a:visited, a:active, a:link, a:hover {text-decoration: underline; color: #009946;} /* Font color can be changed */
-        p {margin: 0; padding: 0;}
-        span[class=appleLinkGrey] a {text-decoration: none; color: #999999;} /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
-        a[class=button]:hover {background-color: #0b8843 !important;}
-	</style>
+    /* Spacing Resets */
+    .padL-0 {padding-left: 0px!important;}
+    .padL-5 {padding-left: 5px!important;}
+    .padL-10 {padding-left: 10px!important;}
+    .padL-15 {padding-left: 15px!important;}
+    .padL-20 {padding-left: 20px!important;}
+    .padL-25 {padding-left: 25px!important;}
+    .padL-30 {padding-left: 30px!important;}
+    .padL-35 {padding-left: 35px!important;}
+    .padR-0 {padding-right: 0px!important;}
+    .padR-5 {padding-right: 5px!important;}
+    .padR-10 {padding-right: 10px!important;}
+    .padR-15 {padding-right: 15px!important;}
+    .padR-20 {padding-right: 20px!important;}
+    .padR-25 {padding-right: 25px!important;}
+    .padR-30 {padding-right: 30px!important;}
+    .padR-35 {padding-right: 35px!important;}
+    
+    /* Text Resets */
+    .txt18px {font-size: 18px !important; line-height: 24px !important;}
+
+    /* Hide from Mobile */
+    .mHide {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
+  }
+</style>
+	<!--[if gte mso 9]>
+	<xml>
+	  <o:OfficeDocumentSettings>
+	    <o:AllowPNG/>
+	    <o:PixelsPerInch>96</o:PixelsPerInch>
+	 </o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
 </head>
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="width: 100%; margin: 0; padding: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing: antialiased; mso-line-height-rule: exactly; font-family: Arial,Verdana,sans-serif;">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%; Margin: 0; padding: 0;" role="presentation">
 	<center>
 	<!-- // Email Body Wrap -->
-	<table id="wrap" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding: 0; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+	<table class="bodyWrapTable" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 		<tr>
-			<td align="center" valign="top">
+      <td class="bodyWrapCell" align="center" valign="top">
+      <!-- // Content Wrap -->
+			<table id="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" width="620px" style="width: 620px; min-width: 620px;" role="presentation">
+				<tr>
+					<td valign="top" align="center">
+									<!-- // Start Content -->		
 				<!-- // Preheader -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#666666" class="hide" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+  <tr>
+    <td valign="top" align="left" style="padding: 10px 20px 5px 20px; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;">Boilerplate Email Template Preheader.</td>
+    <td valign="top" align="right" style="padding: 10px 20px 5px 20px; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;"><a href="#" style="text-decoration:underline; color:#000001; white-space: nowrap;" target="_blank">View in browser</a></td>
+  </tr>
+</table>
+<!-- Preheader \\ -->
+				<!-- // Content Wrap -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" role="presentation">
 					<tr>
 						<td valign="top" align="center">
-							<table border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+							<!-- Module 1 -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" role="presentation">
 								<tr>
-									<td valign="top" align="left" style="padding: 10px 5px 10px 5px;">
-										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-											<tr>
-												<td valign="top" align="left"><span style="font-size: 12px; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ebebeb;">Boilerplate Email Template Preheader</span></td>
-												<td valign="top" align="right"><span style="font-size: 12px; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ebebeb;"><a href="#" style="text-decoration:underline; color:#ebebeb; white-space: nowrap;" target="_blank">View in your browser</a>&nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="#" style="text-decoration:underline; color:#ebebeb;" target="_blank">Unsubscribe</a></span></td>
-											</tr>
-										</table>
+									<td valign="top" align="center">
+										<img src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; display: block;" class="image100p" />
 									</td>
 								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-				<!-- Preheader \\ -->
-				<!-- // Content Wrap -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ebebeb" style="background-color: #ebebeb; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-					<tr>
-						<td valign="top" align="center" bgcolor="#ebebeb">
-							<table id="contentWrap" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" width="600" align="center" style="width: 600px; max-width: 600px; text-align: left; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 								<tr>
-									<td valign="top" align="center" bgcolor="#ebebeb">
-										<!-- // Hero -->
-										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+									<td valign="top" align="left" style="padding: 30px 20px;">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 											<tr>
-												<td valign="top" align="center" style="padding: 10px 10px 20px 10px;">
-													<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+												<td valign="top"><h2 style="Margin:0;padding:0;font-size: 32px; mso-line-height-rule:exactly; line-height: 36px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Hero Headline</h2></td>
+											</tr>
+											<tr>
+												<td valign="top" style="padding-top: 15px;"><p style="font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+												</td>
+											</tr>
+											<tr>
+												<td valign="top" align="left" style="padding: 20px 0px;">
+													<table border="0" cellpadding="0" cellspacing="0" role="presentation">
 														<tr>
-															<td valign="top" align="center"><img src="images/placeholder_580x200.jpg" alt="Placeholder Image" width="580" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; max-width: 580px; display: block;" class="heroImage" /></td>
-														</tr>
-														<tr>
-															<td valign="top" align="left" style="padding-top: 20px;">
-																<span style="font-size: 32px; line-height: 36px; 	font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Hero Headline</span>
-																<br />
-																<span style="font-size: 17px; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-															</td>
+															<td valign="top" bgcolor="#bd262f" style="padding: 5px 15px; line-height: 24px;"><a href="#" style="display:inline-block; border-top: 8px solid #bd262f; border-left: 30px solid #bd262f; border-bottom: 8px solid #bd262f; border-right: 30px solid #bd262f; font-size: 19px; font-family: Arial,Helvetica,sans-serif; text-decoration: none; color: #fffffe;">Button CTA&nbsp;&nbsp;&nbsp;&rarr;</a></td>
 														</tr>
 													</table>
 												</td>
 											</tr>
 										</table>
-										<!-- Hero \\ -->
 									</td>
 								</tr>
 							</table>
@@ -113,20 +135,28 @@
 					</tr>
 				</table>
 				<!-- // Footer -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#666666" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-					<tr>
-						<td valign="top" align="center" bgcolor="#666666">
-							<table border="0" cellpadding="0" cellspacing="0" width="600" class="footerContainer" style="max-width: 600px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-								<tr>
-									<td valign="top" align="left" style="padding: 10px 5px 10px 5px;">
-										<span style="font-size: 12px; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ebebeb;">You were added to this list because you signed up for newsletter communications.<br /><br />&copy; 2018 Company Newsletter</span>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-				<!-- Preheader \\ -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#666666" role="presentation">
+  <tr>
+    <td valign="top" align="left" style="padding: 15px 20px 25px 20px;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+        <tr>
+          <td valign="top" style="padding-top: 10px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">You were added to this list because you signed up for newsletter communications.</p></td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding-top: 5px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;"><a href="#" style="text-decoration: underline; color: #fffffe;" target="_blank">Privacy Statement</a> | <a href="#" style="text-decoration: underline; color: #fffffe;">Unsubscribe</a></td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding-top: 20px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">&copy; 2018 Company Newsletter</p></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- Preheader \\ -->
+					</td>
+				</tr>
+			</table>
+      <!-- Content Wrap \\ -->
 			</td>
 		</tr>
 	</table>
