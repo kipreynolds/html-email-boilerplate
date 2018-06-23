@@ -14,14 +14,15 @@
   .ReadMsgBody, .ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
   .ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
   .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-  body {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
-  table {border-collapse: collapse;}
+  body { width:100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Maintains width */
+  table {border-collapse: collapse!important;}
   table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+  th { font-weight:normal; padding:0; }
   img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
   a img {text-decoration: none; border: 0;}
   a:visited, a:active, a:link, a:hover {text-decoration: none; color: #bd262f;} /* Font color can be changed */
   H1, H2, H3, H4, H5, p, div, body {Margin: 0; padding: 0;}
-  body {width:100% !important; min-width: 100%;} /* Maintains width */
+  div[style*="margin: 16px 0"] { margin:0 !important; }
   /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
   .appleLinkGrey a {text-decoration: none; color: #999999;}
   .appleLinkRed a {text-decoration: none; color: #bd262f;}
@@ -94,7 +95,7 @@
 				<!-- // Header -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
   <tr>
-    <td valign="top" align="center" style="padding: 5px 20px 10px 20px;"><img class="m70px" src="https://www.kip-reynolds.net/img/kr-logo.png" alt="Logo" border="0" width="90" style="width: 90px; min-width: 90px; border: 0; outline: 0; display: block; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;" /></td>
+    <td valign="top" align="center" style="padding: 5px 20px 10px 20px;"><img class="m70px" src="https://www.kip-reynolds.net/img/kr-logo.png" alt="Logo" border="0" vspace="0" hspace="0" width="90" style="width: 90px; min-width: 90px; border: 0; outline: none; display: block; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;" /></td>
   </tr>
 </table>
 <!-- Header \\ -->
@@ -106,7 +107,7 @@
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
 									<td valign="top" align="center">
-										<img src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; display: block;" class="image100p" />
+										<img class="image100p" src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; border: 0; outline: none; display: block;" />
 									</td>
 								</tr>
 								<tr>
