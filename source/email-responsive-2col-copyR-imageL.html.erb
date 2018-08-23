@@ -1,0 +1,106 @@
+---
+layout: "email-base"
+pageTitle: "HTML Email Responsive 2 Column - Copy Right Image Left"
+
+# Defaults to #ebebeb
+# bodyBackground: ""
+
+# Defaults to 620px
+# emailWith: ""
+
+# Defaults to 310px
+# columnWidth: ""
+
+# Defaults to 260px
+# columnImageWidth: ""
+
+# Defaults to 25px
+# columnSideSpacing: ""
+
+# Defaults to 25px
+# dividerPadding: ""
+
+# Defaults to #666666
+# footerBackground: ""
+
+# Leave empty to hide table row
+footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
+---
+			<!-- // Start Content -->		
+				<%= partial "partials/module-header" %>
+				<!-- // Content Wrap -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="width: 100%; min-width: 100%;" role="presentation">
+					<tr>
+						<td valign="top" align="center">
+							<!-- Module 1 -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td valign="top" align="center">
+										<img class="image100p" src="http://www.fillmurray.com/<%= current_page.data.emailWidth || "620" %>/300" alt="Placeholder Image" width="<%= current_page.data.emailWidth || "620" %>" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.emailWidth || "620" %>px; border: 0; outline: none; display: block;" />
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" align="left" style="padding: 30px 25px;">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+											<tr>
+												<td valign="top" align="center"><h2 style="Margin:0;padding:0;font-size: 32px; mso-line-height-rule:exactly; line-height: 36px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Hero Headline</h2></td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding-top: 15px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+												</td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding: 30px 0px 20px 0px;">
+													<table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center" style="margin: 0 auto;">
+														<tr>
+															<td valign="top" bgcolor="#bd262f" style="border-radius: 5px;"><a href="https://www.google.com" style="display:block; padding: 10px 20px; border: 1px solid #bd262f; border-radius: 5px; font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif; text-decoration: none; color: #fffffe;" target="_blank">Button CTA&nbsp;&nbsp;&rarr;</a></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<%= partial "partials/component-dividerLine" %>
+							<!-- Module 2 - 2 Column Copy Right Image Left -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
+										<!-- Column 1 of 2 Image -->
+                    <table class="column" border="0" cellpadding="0" cellspacing="0" width="<%= current_page.data.columnWidth || "310" %>" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;" role="presentation">
+                      <tr>
+                        <td valign="top" align="center" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
+                          <img class="image100p" src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/220" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" />
+                        </td>
+                      </tr>
+                    </table>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="<%= current_page.data.columnWidth || "310" %>" valign="top" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;">
+										<![endif]-->
+										<!-- Column 2 of 2 Copy -->
+                    <table class="column" border="0" cellpadding="0" cellspacing="0" width="<%= current_page.data.columnWidth || "310" %>" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;" role="presentation">
+                      <tr>
+                        <td class="padT-35" valign="top" align="left" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" align="left" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem!</p></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" align="left" style="padding: 30px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+                            <tr>
+                              <td valign="top" align="left" style="font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif;"><a href="https://www.google.com" style="text-decoration: none; color: #bd262f;" target="_blank"><strong>Secondary CTA&nbsp;&nbsp;&rarr;</strong></a></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+									</td>
+								</tr>
+							</table>
+							<!-- Content Wrap \\ -->
+						</td>
+					</tr>
+				</table>
+				<%= partial "partials/module-footer" %>
