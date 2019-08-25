@@ -5,6 +5,12 @@ pageTitle: "HTML Email Responsive 2 Column - Copy Left Image Right"
 # Defaults to #ebebeb
 # bodyBackground: ""
 
+# Defaults to #ffffff
+# contentBackground: ""
+
+# Defaults to #ebebeb
+# headerBackground: ""
+
 # Defaults to 620px
 # emailWith: ""
 
@@ -26,11 +32,12 @@ pageTitle: "HTML Email Responsive 2 Column - Copy Left Image Right"
 # Leave empty to hide table row
 footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
 ---
-			<!-- // Start Content -->		
-				<%= partial "partials/module-header" %>
-				<!-- // Content Wrap -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="width: 100%; min-width: 100%;" role="presentation">
-					<tr>
+					<tr>	
+						<td valign="top" align="center">	
+							<%= partial "partials/module-header" %>
+						</td>
+					</tr>
+					<tr>	
 						<td valign="top" align="center">
 							<!-- Module 1 -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
@@ -67,44 +74,47 @@ footerPermissionReminder: "You were added to this list because you signed up for
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
 									<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
-										<!-- Column 1 of 2 Copy -->
-                    <div class="m-arrangeBottom">
-                      <table class="column" border="0" cellpadding="0" cellspacing="0" width="<%= current_page.data.columnWidth || "310" %>" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;" role="presentation">
-                        <tr>
-                          <td class="padT-35" valign="top" align="left" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
-                        </tr>
-                        <tr>
-                          <td valign="top" align="left" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem!</p></td>
-                        </tr>
-                        <tr>
-                          <td valign="top" align="left" style="padding: 30px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-                              <tr>
-                                <td valign="top" align="left" style="font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif;"><a href="https://www.google.com" style="text-decoration: none; color: #bd262f;" target="_blank"><strong>Secondary CTA&nbsp;&nbsp;&rarr;</strong></a></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-										<!--[if (gte mso 9)|(IE)]>
-										</td><td width="<%= current_page.data.columnWidth || "310" %>" valign="top" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;">
-										<![endif]-->
-										<!-- Column 2 of 2 Image -->
-                    <div class="m-arrangeTop">
-                      <table class="column" border="0" cellpadding="0" cellspacing="0" width="<%= current_page.data.columnWidth || "310" %>" align="left" style="width: <%= current_page.data.columnWidth || "310" %>px; min-width: <%= current_page.data.columnWidth || "310" %>px;" role="presentation">
-                        <tr>
-                          <td valign="top" align="center" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
-                            <img class="image100p" src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/220" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" />
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+											<tr>
+												<th valign="top" class="mHide"><div style="margin: 0; padding: 0; font-size: 1px; line-height: 1px;">&nbsp;</div></th>
+												<th rowspan="2" valign="top" class="column">
+													<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+														<tr>
+															<td valign="top" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><img class="image100p" src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/220" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" /></td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+											<tr>
+												<th valign="top" class="column">
+													<!-- Column 1 of 2 Copy -->
+													<table width="100%" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td class="padT-35" valign="top" align="left" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
+														</tr>
+														<tr>
+															<td valign="top" align="left" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem!</p></td>
+														</tr>
+														<tr>
+															<td valign="top" align="left" style="padding: 30px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
+																<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+																	<tr>
+																		<td valign="top" align="left" style="font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif;"><a href="https://www.google.com" style="text-decoration: none; color: #bd262f;" target="_blank"><strong>Secondary CTA&nbsp;&nbsp;&rarr;</strong></a></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
-							<!-- Content Wrap \\ -->
 						</td>
 					</tr>
-				</table>
-				<%= partial "partials/module-footer" %>
+					<tr>	
+						<td valign="top" align="center">
+							<%= partial "partials/module-footer" %>
+						</td>
+					</tr>

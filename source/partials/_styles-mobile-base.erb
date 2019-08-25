@@ -1,15 +1,12 @@
 <style type="text/css">
   /* == Mobile Styles == */
-  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     /* Width Resets */
-    #emailWrap {width: 100% !important; min-width: 100% !important;}
-    .column, .mobileRow {width: 100% !important; min-width: 100% !important;}
-    .column--mobile50 {width: 50% !important; min-width: 50% !important;}
+    .emailWrap {width: 100% !important; min-width: 100% !important;}
+    .row, .column {display: block !important; width: 100% !important; min-width: 100% !important;}
+    .column--mobile50 {display: inline-block !important; width: 50% !important; min-width: 50% !important;}
     .image100p {width: 100% !important; min-width: 100% !important; height: auto !important;}
     .m70px {width: 70px!important; min-width: 70px!important; height: auto!important;}
-    .m-arrangeTop {display: table-header-group!important;}
-    .m-arrangeBottom {display: table-footer-group!important;}
-    .m-borderB-2 {border-bottom: 2px solid #ebebeb;}
 
     /* Spacing Resets */
     .padL-0 {padding-left: 0px!important;}
@@ -47,8 +44,8 @@
     
     /* Text Resets */
     .txt18px {font-size: 18px !important; line-height: 24px !important;}
-    .footerLinks .link {display: block!important; width: 100%!important; text-align: center !important; padding-bottom: 10px;}
     .footerLinks {padding-top: 10px !important;}
+    .footerLinks .link {display: block!important; width: 90%!important; text-align: center !important; text-decoration: none !important; margin: 15px auto 15px auto; padding: 8px 0px; border: 1px solid #ffffff !important;}
 
     /* Hide from Mobile */
     .mHide {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}

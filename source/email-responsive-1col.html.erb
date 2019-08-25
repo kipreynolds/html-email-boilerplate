@@ -2,17 +2,33 @@
 layout: "email-base"
 pageTitle: "HTML Email Responsive 1-Column"
 
+# Defaults to #ebebeb
 # bodyBackground: ""
+
+# Defaults to #ffffff
+# contentBackground: ""
+
+# Defaults to #ebebeb
+# headerBackground: ""
+
+# Defaults to 620px
 # emailWith: ""
+
+# Defaults to 25px
 # dividerPadding: ""
+
+# Defaults to #666666
 # footerBackground: ""
+
+# Leave empty to hide table row
 footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
 ---
-			<!-- // Start Content -->		
-				<%= partial "partials/module-header" %>
-				<!-- // Content Wrap -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="width: 100%; min-width: 100%;" role="presentation">
-					<tr>
+					<tr>	
+						<td valign="top" align="center">	
+							<%= partial "partials/module-header" %>
+						</td>
+					</tr>
+					<tr>	
 						<td valign="top" align="center">
 							<!-- Module 1 -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
@@ -69,8 +85,10 @@ footerPermissionReminder: "You were added to this list because you signed up for
 									</td>
 								</tr>
 							</table>
-							<!-- Content Wrap \\ -->
 						</td>
 					</tr>
-				</table>
-				<%= partial "partials/module-footer" %>
+					<tr>	
+						<td valign="top" align="center">
+							<%= partial "partials/module-footer" %>
+						</td>
+					</tr>

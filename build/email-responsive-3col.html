@@ -11,45 +11,39 @@
 	<style type="text/css">
   /* == Client Resets == */
   #outlook a {padding: 0;}
-  .ReadMsgBody, .ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
-  .ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
-  .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-  body { width:100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Maintains width */
-  table {border-collapse: collapse!important;}
-  table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
-  th { font-weight:normal; padding:0; }
-  img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
-  a img {text-decoration: none; border: 0;}
-  a:visited, a:active, a:link, a:hover {text-decoration: none; color: #bd262f;} /* Font color can be changed */
-  H1, H2, H3, H4, H5, p, div, body {Margin: 0; padding: 0;}
+  #MessageViewBody, #MessageWebViewDiv {width: 100% !important;}
   div[style*="margin: 16px 0"] { margin:0 !important; }
-  /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
+  
   .appleLinkGrey a {text-decoration: none; color: #999999;}
   .appleLinkRed a {text-decoration: none; color: #bd262f;}
   .appleLinkWhite a {text-decoration: none; color: #ffffff;}
 </style>
 	<style type="text/css">
   /* == General Styles == */
-  body {background-color: #ebebeb;}
-  .bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+  body {width:100% !important; min-width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; background-color: #ebebeb;}
+  table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+  th { font-weight:normal; padding:0; }
+  img {display: block; border: 0; outline: none;}
+  a img {text-decoration: none;}
+  h1, h2, h3, h4, h5, p, div {Margin: 0; padding: 0;}
+  a, a:visited {color: #bd262f; text-decoration: underline;}
+  a:hover {color: #951d25;} /* Font color can be changed */
+  .bodyWrap {width:100%; min-width: 100%; margin:0 auto; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   .bodyWrapCell {padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 30px;}
-  .emailWrap {width: 620px; min-width: 620px; text-align: left;}
-  .rowContainer {width: 620px; min-width: 620px;}
+  .emailWrap {}
+  .emailWrap {width: 620px; min-width: 620px; text-align: left; margin: 0 auto;}
+  .row {width: 620px; min-width: 620px; text-align: left;}
   .column {width: 206px; min-width: 206px;}
-  .mobileRow {width: 310px; min-width: 310px;}
 </style> 
 	<style type="text/css">
   /* == Mobile Styles == */
-  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     /* Width Resets */
-    #emailWrap {width: 100% !important; min-width: 100% !important;}
-    .column, .mobileRow {width: 100% !important; min-width: 100% !important;}
-    .column--mobile50 {width: 50% !important; min-width: 50% !important;}
+    .emailWrap {width: 100% !important; min-width: 100% !important;}
+    .row, .column {display: block !important; width: 100% !important; min-width: 100% !important;}
+    .column--mobile50 {display: inline-block !important; width: 50% !important; min-width: 50% !important;}
     .image100p {width: 100% !important; min-width: 100% !important; height: auto !important;}
     .m70px {width: 70px!important; min-width: 70px!important; height: auto!important;}
-    .m-arrangeTop {display: table-header-group!important;}
-    .m-arrangeBottom {display: table-footer-group!important;}
-    .m-borderB-2 {border-bottom: 2px solid #ebebeb;}
 
     /* Spacing Resets */
     .padL-0 {padding-left: 0px!important;}
@@ -87,8 +81,8 @@
     
     /* Text Resets */
     .txt18px {font-size: 18px !important; line-height: 24px !important;}
-    .footerLinks .link {display: block!important; width: 100%!important; text-align: center !important; padding-bottom: 10px;}
     .footerLinks {padding-top: 10px !important;}
+    .footerLinks .link {display: block!important; width: 90%!important; text-align: center !important; text-decoration: none !important; margin: 15px auto 15px auto; padding: 8px 0px; border: 1px solid #ffffff !important;}
 
     /* Hide from Mobile */
     .mHide {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
@@ -103,27 +97,26 @@
 	</xml>
 	<![endif]-->
 </head>
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%; Margin: 0; padding: 0;" role="presentation">
+<body class="body" topmargin="0" leftmargin="0" role="presentation">
 	<center>
 	<!-- // Email Body Wrap -->
-	<table class="bodyWrapTable" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+	<table class="bodyWrapTable" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" role="presentation">
 		<tr>
       <td class="bodyWrapCell" align="center" valign="top">
-      <!-- // Content Wrap -->
-			<table id="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" width="620" style="width: 620px; min-width: 620px;" role="presentation">
-				<tr>
-					<td valign="top" align="center">
-									<!-- // Start Content -->		
-				<!-- // Header -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-  <tr>
-    <td valign="top" align="center" style="padding: 5px 20px 10px 20px;"><img class="m70px" src="https://www.kip-reynolds.net/img/kr-logo.png" alt="Logo" border="0" vspace="0" hspace="0" width="90" style="width: 90px; min-width: 90px; border: 0; outline: none; display: block; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;" /></td>
-  </tr>
-</table>
-<!-- Header \\ -->
 				<!-- // Content Wrap -->
-				<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="width: 100%; min-width: 100%;" role="presentation">
-					<tr>
+				<table class="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" role="presentation">
+										<tr>	
+						<td valign="top" align="center">	
+							              <!-- // Header -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ebebeb" style="width: 100%; min-width: 100%;" role="presentation">
+                <tr>
+                  <td valign="top" align="center" style="padding: 5px 20px 10px 20px;"><img class="m70px" src="https://www.kip-reynolds.net/images/kr-logo.png" alt="Logo" width="90" border="0" style="width: 90px; min-width: 90px; border: 0; outline: none; display: block; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#000000;" /></td>
+                </tr>
+              </table>
+              <!-- Header \\ -->
+						</td>
+					</tr>
+					<tr>	
 						<td valign="top" align="center">
 							<!-- Module 1 -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
@@ -155,91 +148,95 @@
 									</td>
 								</tr>
 							</table>
-							<!-- Divider Line -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-  <tr>
-    <td valign="top" style="padding: 0px 25px;">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-        <tr>
-          <td valign="top" style="border-top: 2px solid #ebebeb; padding: 5px 0px; font-size: 1px; mso-line-height-rule: exactly; line-height: 1px;">&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+							              <!-- Divider Line -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+                <tr>
+                  <td valign="top" style="padding: 0px 25px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+                      <tr>
+                        <td valign="top" style="border-top: 2px solid #ebebeb; padding: 5px 0px; font-size: 1px; mso-line-height-rule: exactly; line-height: 1px;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
 							<!-- Module 2 - 3 Column -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
 									<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
-										<!-- Column 1 of 3 -->
-										<table class="column" border="0" cellpadding="0" cellspacing="0" width="206" align="left" style="width: 206px; min-width: 206px;" role="presentation">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 											<tr>
-												<td valign="top" align="center" style="padding: 0px 25px 0px 25px;">
-													<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
-											</tr>
-										</table>
-										<!--[if (gte mso 9)|(IE)]>
-										</td><td width="206" valign="top" align="left" style="width: 206px; min-width: 206px;">
-										<![endif]-->
-										<!-- Column 2 of 3 -->
-										<table class="column" border="0" cellpadding="0" cellspacing="0" width="206" align="left" style="width: 206px; min-width: 206px;" role="presentation">
-											<tr>
-												<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
-													<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
-											</tr>
-										</table>
-                    <!--[if (gte mso 9)|(IE)]>
-										</td><td width="206" valign="top" align="left" style="width: 206px; min-width: 206px;">
-										<![endif]-->
-										<!-- Column 3 of 3 -->
-										<table class="column" border="0" cellpadding="0" cellspacing="0" width="206" align="left" style="width: 206px; min-width: 206px;" role="presentation">
-											<tr>
-												<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
-													<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+												<th valign="top" class="column">
+													<!-- Column 1 of 3 -->
+													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+														<tr>
+															<td valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
+															</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+														</tr>
+													</table>
+												</th>
+												<th valign="top" class="column">
+													<!-- Column 2 of 3 -->
+													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+														<tr>
+															<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
+															</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+														</tr>
+													</table>
+												</th>
+												<th valign="top" class="column">
+													<!-- Column 3 of 3 -->
+													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+														<tr>
+															<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/106/120" alt="Placeholder Image" width="106" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 106px; border: 0; outline: none; display: block;" />
+															</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+														</tr>
+													</table>
+												</th>
 											</tr>
 										</table>
 									</td>
 								</tr>
 							</table>
-							<!-- Content Wrap \\ -->
+						</td>
+					</tr>
+					<tr>	
+						<td valign="top" align="center">
+							              <!-- // Footer -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#666666" role="presentation">
+                <tr>
+                  <td valign="top" align="left" style="padding: 15px 20px 25px 20px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+                      <tr>
+                        <td valign="top" style="padding-top: 10px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">You were added to this list because you signed up for newsletter communications.</p></td>
+                      </tr>
+                      <tr>
+                        <td class="footerLinks" valign="top" style="padding-top: 5px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;"><a class="link" href="#" style="text-decoration: underline; color: #fffffe;" target="_blank">Privacy Statement</a><span class="mHide"> | </span><a class="link" href="#" style="text-decoration: underline; color: #fffffe;">View in browser</a><span class="mHide">  | </span><a class="link" href="#" style="text-decoration: underline; color: #fffffe;">Unsubscribe</a></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="padding-top: 20px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">&copy; 2019 Company Newsletter</p></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- Footer \\ -->
 						</td>
 					</tr>
 				</table>
-				<!-- // Footer -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#666666" role="presentation">
-  <tr>
-    <td valign="top" align="left" style="padding: 15px 20px 25px 20px;">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-        <tr>
-          <td valign="top" style="padding-top: 10px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">You were added to this list because you signed up for newsletter communications.</p></td>
-        </tr>
-        <tr>
-          <td class="footerLinks" valign="top" style="padding-top: 5px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;"><a class="link" href="#" style="text-decoration: underline; color: #fffffe;" target="_blank">Privacy Statement</a><span class="mHide"> | </span><a class="link" href="#" style="text-decoration: underline; color: #fffffe;">View in browser</a><span class="mHide">  | </span><a class="link" href="#" style="text-decoration: underline; color: #fffffe;">Unsubscribe</a></td>
-        </tr>
-        <tr>
-          <td valign="top" style="padding-top: 20px;"><p style="Margin:0;padding:0; font-size: 12px; mso-line-height-rule:exactly; line-height: 15px; font-family: Arial,Verdana,sans-serif; color:#ffffff;">&copy; 2018 Company Newsletter</p></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<!-- Preheader \\ -->
-					</td>
-				</tr>
-			</table>
-      <!-- Content Wrap \\ -->
+				<!-- Content Wrap \\ -->
 			</td>
 		</tr>
 	</table>

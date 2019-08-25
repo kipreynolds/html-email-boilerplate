@@ -11,45 +11,39 @@
 	<style type="text/css">
   /* == Client Resets == */
   #outlook a {padding: 0;}
-  .ReadMsgBody, .ExternalClass {width: 100%;} /* Force Outlook.com to display emails at full width */
-  .ExternalClass * {line-height: 100%;} /* Outlook.com line-height fix */
-  .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div {line-height: 100%; mso-line-height-rule: exactly;} /* Outlook.com line-height fix */
-  body { width:100% !important; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Maintains width */
-  table {border-collapse: collapse!important;}
-  table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
-  th { font-weight:normal; padding:0; }
-  img {-ms-interpolation-mode: bicubic; border: 0; outline: none; display: block;}
-  a img {text-decoration: none; border: 0;}
-  a:visited, a:active, a:link, a:hover {text-decoration: none; color: #bd262f;} /* Font color can be changed */
-  H1, H2, H3, H4, H5, p, div, body {Margin: 0; padding: 0;}
+  #MessageViewBody, #MessageWebViewDiv {width: 100% !important;}
   div[style*="margin: 16px 0"] { margin:0 !important; }
-  /* Use for controlling styling of auto-detected text on iOS - Font color can be changed */
+  
   .appleLinkGrey a {text-decoration: none; color: #999999;}
   .appleLinkRed a {text-decoration: none; color: #bd262f;}
   .appleLinkWhite a {text-decoration: none; color: #ffffff;}
 </style>
 	<style type="text/css">
   /* == General Styles == */
-  body {background-color: #ebebeb;}
-  .bodyWrap {width:100%; margin:0; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+  body {width:100% !important; min-width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; background-color: #ebebeb;}
+  table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+  th { font-weight:normal; padding:0; }
+  img {display: block; border: 0; outline: none;}
+  a img {text-decoration: none;}
+  h1, h2, h3, h4, h5, p, div {Margin: 0; padding: 0;}
+  a, a:visited {color: #bd262f; text-decoration: underline;}
+  a:hover {color: #951d25;} /* Font color can be changed */
+  .bodyWrap {width:100%; min-width: 100%; margin:0 auto; padding:0; text-align: center; font-family: Arial,Verdana,sans-serif; background-color: #ebebeb; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   .bodyWrapCell {padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 30px;}
-  .emailWrap {width: 620px; min-width: 620px; text-align: left;}
-  .rowContainer {width: 620px; min-width: 620px;}
+  .emailWrap {}
+  .emailWrap {width: 620px; min-width: 620px; text-align: left; margin: 0 auto;}
+  .row {width: 620px; min-width: 620px; text-align: left;}
   .column {width: 310px; min-width: 310px;}
-  .mobileRow {width: 310px; min-width: 310px;}
 </style> 
 	<style type="text/css">
   /* == Mobile Styles == */
-  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     /* Width Resets */
-    #emailWrap {width: 100% !important; min-width: 100% !important;}
-    .column, .mobileRow {width: 100% !important; min-width: 100% !important;}
-    .column--mobile50 {width: 50% !important; min-width: 50% !important;}
+    .emailWrap {width: 100% !important; min-width: 100% !important;}
+    .row, .column {display: block !important; width: 100% !important; min-width: 100% !important;}
+    .column--mobile50 {display: inline-block !important; width: 50% !important; min-width: 50% !important;}
     .image100p {width: 100% !important; min-width: 100% !important; height: auto !important;}
     .m70px {width: 70px!important; min-width: 70px!important; height: auto!important;}
-    .m-arrangeTop {display: table-header-group!important;}
-    .m-arrangeBottom {display: table-footer-group!important;}
-    .m-borderB-2 {border-bottom: 2px solid #ebebeb;}
 
     /* Spacing Resets */
     .padL-0 {padding-left: 0px!important;}
@@ -87,8 +81,8 @@
     
     /* Text Resets */
     .txt18px {font-size: 18px !important; line-height: 24px !important;}
-    .footerLinks .link {display: block!important; width: 100%!important; text-align: center !important; padding-bottom: 10px;}
     .footerLinks {padding-top: 10px !important;}
+    .footerLinks .link {display: block!important; width: 90%!important; text-align: center !important; text-decoration: none !important; margin: 15px auto 15px auto; padding: 8px 0px; border: 1px solid #ffffff !important;}
 
     /* Hide from Mobile */
     .mHide {display: none !important; width: 0px !important; max-height: 0px !important; line-height: 0px !important; padding: 0 !important; mso-hide: all !important;}
@@ -103,21 +97,17 @@
 	</xml>
 	<![endif]-->
 </head>
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%; Margin: 0; padding: 0;" role="presentation">
+<body class="body" topmargin="0" leftmargin="0" role="presentation">
 	<center>
 	<!-- // Email Body Wrap -->
-	<table class="bodyWrapTable" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+	<table class="bodyWrapTable" border="0" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" role="presentation">
 		<tr>
       <td class="bodyWrapCell" align="center" valign="top">
-      <!-- // Content Wrap -->
-			<table id="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" width="620" style="width: 620px; min-width: 620px;" role="presentation">
-				<tr>
-					<td valign="top" align="center">
-						<!-- // Start Content -->			
-					</td>
-				</tr>
-			</table>
-      <!-- Content Wrap \\ -->
+				<!-- // Content Wrap -->
+				<table class="emailWrap" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" role="presentation">
+					<!-- // Start Content -->			
+				</table>
+				<!-- Content Wrap \\ -->
 			</td>
 		</tr>
 	</table>
