@@ -1,0 +1,4 @@
+---
+title: Email Text Boilerplate
+layout: main-text.hbs
+---
