@@ -1,0 +1,23 @@
+{
+  "name": "html-email-boilerplate",
+  "version": "1.0.0",
+  "description": "HTML Email Boilerplate",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kipreynolds/html-email-boilerplate.git"
+  },
+  "author": "Kip Reynolds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kipreynolds/html-email-boilerplate/issues"
+  },
+  "homepage": "https://github.com/kipreynolds/html-email-boilerplate#readme"
+}
