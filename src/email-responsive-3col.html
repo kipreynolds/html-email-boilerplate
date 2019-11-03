@@ -1,6 +1,6 @@
 ---
-layout: "layouts/main"
-pageTitle: "HTML Email Responsive 3 Column"
+layout: "layouts/main.njk"
+title: "HTML Email Responsive 3 Column"
 
 # Defaults to #ebebeb
 # bodyBackground: ""
@@ -33,17 +33,12 @@ columnImageWidth: "106"
 footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
 ---
 					<tr>	
-						<td valign="top" align="center">	
-							<%= partial "partials/module-header" %>
-						</td>
-					</tr>
-					<tr>	
 						<td valign="top" align="center">
 							<!-- Module 1 -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
 									<td valign="top" align="center">
-										<img class="image100p" src="http://www.fillmurray.com/<%= current_page.data.emailWidth || "620" %>/300" alt="Placeholder Image" width="<%= current_page.data.emailWidth || "620" %>" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.emailWidth || "620" %>px; border: 0; outline: none; display: block;" />
+										<img class="image100p" src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; border: 0; outline: none; display: block;" />
 									</td>
 								</tr>
 								<tr>
@@ -69,7 +64,8 @@ footerPermissionReminder: "You were added to this list because you signed up for
 									</td>
 								</tr>
 							</table>
-							<%= partial "partials/component-dividerLine" %>
+							{% set divider = { padding: dividerPadding, size: dividerSize, color: dividerColor } %}
+							{% include './includes/partials/component-dividerLine.njk' %}
 							<!-- Module 2 - 3 Column -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
@@ -80,12 +76,12 @@ footerPermissionReminder: "You were added to this list because you signed up for
 													<!-- Column 1 of 3 -->
 													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 														<tr>
-															<td valign="top" align="center" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
-																<img src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/120" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" />
+															<td valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/{{columnImageWidth}}/120" alt="Placeholder Image" width="{{columnImageWidth}}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {{columnImageWidth}}px; border: 0; outline: none; display: block;" />
 															</td>
 														</tr>
 														<tr>
-															<td valign="top" align="center" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
 														</tr>
 													</table>
 												</th>
@@ -93,12 +89,12 @@ footerPermissionReminder: "You were added to this list because you signed up for
 													<!-- Column 2 of 3 -->
 													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 														<tr>
-															<td class="padT-35" valign="top" align="center" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
-																<img src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/120" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" />
+															<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/{{columnImageWidth}}/120" alt="Placeholder Image" width="{{columnImageWidth}}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {{columnImageWidth}}px; border: 0; outline: none; display: block;" />
 															</td>
 														</tr>
 														<tr>
-															<td valign="top" align="center" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
 														</tr>
 													</table>
 												</th>
@@ -106,12 +102,12 @@ footerPermissionReminder: "You were added to this list because you signed up for
 													<!-- Column 3 of 3 -->
 													<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 														<tr>
-															<td class="padT-35" valign="top" align="center" style="padding: 0px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;">
-																<img src="http://www.fillmurray.com/<%= current_page.data.columnImageWidth || "260" %>/120" alt="Placeholder Image" width="<%= current_page.data.columnImageWidth || "260" %>" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: <%= current_page.data.columnImageWidth || "260" %>px; border: 0; outline: none; display: block;" />
+															<td class="padT-35" valign="top" align="center" style="padding: 0px 25px 0px 25px;">
+																<img src="http://www.fillmurray.com/{{columnImageWidth}}/120" alt="Placeholder Image" width="{{columnImageWidth}}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {{columnImageWidth}}px; border: 0; outline: none; display: block;" />
 															</td>
 														</tr>
 														<tr>
-															<td valign="top" align="center" style="padding: 15px <%= current_page.data.columnSideSpacing || "25" %>px 0px <%= current_page.data.columnSideSpacing || "25" %>px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+															<td valign="top" align="center" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
 														</tr>
 													</table>
 												</th>
@@ -120,10 +116,5 @@ footerPermissionReminder: "You were added to this list because you signed up for
 									</td>
 								</tr>
 							</table>
-						</td>
-					</tr>
-					<tr>	
-						<td valign="top" align="center">
-							<%= partial "partials/module-footer" %>
 						</td>
 					</tr>
