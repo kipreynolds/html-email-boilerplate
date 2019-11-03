@@ -2,10 +2,5 @@
 .cache
 .DS_Store
 .sass-cache
-<<<<<<< Updated upstream
-/node_modules
-package-lock.json
-package.json
-=======
 node_modules
->>>>>>> Stashed changes
+site
