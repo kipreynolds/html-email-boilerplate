@@ -1,0 +1,20 @@
+{
+  "bodyBackgroundDefault": "#ebebeb",
+  "contentBackgroundDefault": "#ffffff",
+  "headerBackgroundDefault": "#ebebeb",
+  "emailWidthDefault": "620",
+  "rowWidthDefault": "620",
+  "columnWidthDefault": "310",
+  "columnImageWidthDefault": "260",
+  "columnSideSpacingDefault": "25",
+  "btnBackgroundDefault": "#bd262f",
+  "btnRadiusDefault": "5",
+  "btnTextColorDefault": "#fffffe",
+  "secondaryCTAAlignDefault": "center",
+  "secondaryCTATextColorDefault": "#bd262f",
+  "secondaryCTADecorationDefault": "none",
+  "dividerPaddingDefault": "25",
+  "dividerSizeDefault": "2",
+  "dividerColorDefault": "#ebebeb",
+  "footerBackgroundDefault": "#666666"
+}

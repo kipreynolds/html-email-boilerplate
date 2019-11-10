@@ -1,0 +1,108 @@
+---
+layout: "layouts/main.njk"
+title: "1 Column"
+tags: 1col
+
+# Leave empty to hide table row
+preheader: "HTML Email Responsive 1-Column"
+
+# Defaults to #ebebeb
+# bodyBackground: ""
+
+# Defaults to #ffffff
+# contentBackground: ""
+
+# Defaults to #ebebeb
+# headerBackground: ""
+
+# Defaults to 620px
+# emailWidth: ""
+
+# Defaults to 25px
+# dividerPadding: ""
+
+# Defaults to 2px
+# dividerSize: ""
+
+# Defaults to #ebebeb
+# dividerColor: ""
+
+# Defaults to #bd262f
+# btnBackground: ""
+
+# Defaults to 5px
+# btnRadius: ""
+
+# Defaults to #fffffe
+# btnTextColor: ""
+
+# Defaults to center
+# secondaryCTAAlign: ""
+
+# Defaults to #bd262f
+# secondaryCTATextColor: ""
+
+# Defaults to none
+# secondaryCTADecoration: ""
+
+# Defaults to #666666
+# footerBackground: ""
+
+# Leave empty to hide table row
+footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
+---
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td align="center" bgcolor="#cccccc" style="padding: 20px;"><h1 style="Margin: 0; padding: 0; font-size: 28px; line-height: 35px;">{{title}}</h1></td>
+								</tr>
+							</table>
+							<!-- Module 1 -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td valign="top" align="center">
+										<img class="image100p" src="http://www.fillmurray.com/{% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}/300" alt="Placeholder Image" width="{% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" />
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" align="left" style="padding: 30px 25px;">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+											<tr>
+												<td valign="top" align="center"><h2 style="Margin:0;padding:0;font-size: 32px; mso-line-height-rule:exactly; line-height: 36px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Hero Headline</h2></td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding-top: 15px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+												</td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding: 30px 0px 20px 0px;">
+													{% set button = { background: btnBackground, radius: btnRadius, textColor: btnTextColor } %}
+													{% include './includes/partials/component-button.njk' %}
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							{% set divider = { padding: dividerPadding, size: dividerSize, color: dividerColor } %}
+							{% include './includes/partials/component-dividerLine.njk' %}
+							<!-- Module 2 -->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td valign="top" style="padding: 30px 25px">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+											<tr>
+												<td valign="top" align="center"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding-top: 15px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem, totam aspernatur impedit, ad eveniet rerum consequuntur!</p></td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="padding: 30px 0px 20px 0px;">
+													{% set secondaryCTA = { align: secondaryCTAAlign, decoration: secondaryCTADecoration, textColor: secondaryCTATextColor } %}
+													{% include './includes/partials/component-secondaryCTA.njk' %}
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>

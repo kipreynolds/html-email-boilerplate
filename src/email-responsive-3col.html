@@ -1,0 +1,90 @@
+---
+layout: "layouts/main.njk"
+title: "3 Column Desktop - 1 Column Mobile"
+tags: 3col
+
+# Leave empty to hide table row
+preheader: "HTML Email Responsive 3 Column Desktop - 1 Column Mobile"
+
+# Defaults to #ebebeb
+# bodyBackground: ""
+
+# Defaults to #ffffff
+# contentBackground: ""
+
+# Defaults to #ebebeb
+# headerBackground: ""
+
+# Defaults to 620px
+# emailWith: ""
+
+# Defaults to 310px
+columnWidth: "206"
+
+# Defaults to 260px
+columnImageWidth: "106"
+
+# Defaults to 25px
+# columnSideSpacing: ""
+
+# Defaults to #666666
+# footerBackground: ""
+
+# Leave empty to hide table row
+footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
+---
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+						<tr>
+							<td align="center" bgcolor="#cccccc" style="padding: 20px;"><h1 style="Margin: 0; padding: 0; font-size: 26px; line-height: 31px;">{{title}}</h1></td>
+						</tr>
+					</table>
+					<!-- 3 Column -->
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+						<tr>
+							<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+									<tr>
+										<th valign="top" class="column">
+											<!-- Column 1 of 3 -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+												<tr>
+													<td valign="top" align="center" style="padding: 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;">
+														<img src="http://www.fillmurray.com/{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}/120" alt="Placeholder Image" width="{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top" align="center" style="padding: 15px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+												</tr>
+											</table>
+										</th>
+										<th valign="top" class="column">
+											<!-- Column 2 of 3 -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+												<tr>
+													<td class="padT-35" valign="top" align="center" style="padding: 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;">
+														<img src="http://www.fillmurray.com/{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}/120" alt="Placeholder Image" width="{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top" align="center" style="padding: 15px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+												</tr>
+											</table>
+										</th>
+										<th valign="top" class="column">
+											<!-- Column 3 of 3 -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+												<tr>
+													<td class="padT-35" valign="top" align="center" style="padding: 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;">
+														<img src="http://www.fillmurray.com/{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}/120" alt="Placeholder Image" width="{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}" height="120" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top" align="center" style="padding: 15px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor</p></td>
+												</tr>
+											</table>
+										</th>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
