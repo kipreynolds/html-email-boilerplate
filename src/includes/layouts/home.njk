@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Email Boilerplate</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      width: 100%;
+    }
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .row {
+      margin: 30px 0px;
+    }
+    .pages {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>HTML Email Framework</h1>
+      {{ content | safe }}
+    </div>
+  </main>
+</body>
+</html>

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/main.njk"
-title: "HTML Email Responsive 1-Column"
+title: "1 Column"
+tags: 1col
 
 # Leave empty to hide table row
 preheader: "HTML Email Responsive 1-Column"
@@ -50,11 +51,16 @@ preheader: "HTML Email Responsive 1-Column"
 # Leave empty to hide table row
 footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
 ---
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<td align="center" bgcolor="#cccccc" style="padding: 20px;"><h1 style="Margin: 0; padding: 0; font-size: 28px; line-height: 35px;">{{title}}</h1></td>
+								</tr>
+							</table>
 							<!-- Module 1 -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
 								<tr>
 									<td valign="top" align="center">
-										<img class="image100p" src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; border: 0; outline: none; display: block;" />
+										<img class="image100p" src="http://www.fillmurray.com/{% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}/300" alt="Placeholder Image" width="{% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if emailWidth %}{{ emailWidth }}{% else %}{{ defaults.emailWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" />
 									</td>
 								</tr>
 								<tr>

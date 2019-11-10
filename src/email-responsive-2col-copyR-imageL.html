@@ -1,6 +1,10 @@
 ---
 layout: "layouts/main.njk"
-title: "HTML Email Responsive 2 Column - Copy Right Image Left"
+title: "2 Column Desktop - Copy Right Image Left"
+tags: 2col
+
+# Leave empty to hide table row
+preheader: "HTML Email Responsive 2 Column Desktop - Copy Right Image Left"
 
 # Defaults to #ebebeb
 # bodyBackground: ""
@@ -23,8 +27,14 @@ title: "HTML Email Responsive 2 Column - Copy Right Image Left"
 # Defaults to 25px
 # columnSideSpacing: ""
 
-# Defaults to 25px
-# dividerPadding: ""
+# Defaults to center
+secondaryCTAAlign: "left"
+
+# Defaults to #bd262f
+# secondaryCTATextColor: ""
+
+# Defaults to none
+# secondaryCTADecoration: ""
 
 # Defaults to #666666
 # footerBackground: ""
@@ -32,80 +42,46 @@ title: "HTML Email Responsive 2 Column - Copy Right Image Left"
 # Leave empty to hide table row
 footerPermissionReminder: "You were added to this list because you signed up for newsletter communications."
 ---
-				<tr>	
-					<td valign="top" align="center">
-						<!-- Module 1 -->
-						<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="width: 100%; min-width: 100%;" role="presentation">
-							<tr>
-								<td valign="top" align="center">
-									<img class="image100p" src="http://www.fillmurray.com/620/300" alt="Placeholder Image" width="620" height="300" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 620px; border: 0; outline: none; display: block;" />
-								</td>
-							</tr>
-							<tr>
-								<td valign="top" align="left" style="padding: 30px 25px;">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-										<tr>
-											<td valign="top" align="center"><h2 style="Margin:0;padding:0;font-size: 32px; mso-line-height-rule:exactly; line-height: 36px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Hero Headline</h2></td>
-										</tr>
-										<tr>
-											<td valign="top" align="center" style="padding-top: 15px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-											</td>
-										</tr>
-										<tr>
-											<td valign="top" align="center" style="padding: 30px 0px 20px 0px;">
-												<table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center" style="margin: 0 auto;">
-													<tr>
-														<td valign="top" bgcolor="#bd262f" style="border-radius: 5px;"><a href="https://www.google.com" style="display:block; padding: 10px 20px; border: 1px solid #bd262f; border-radius: 5px; font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif; text-decoration: none; color: #fffffe;" target="_blank">Button CTA&nbsp;&nbsp;&rarr;</a></td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</table>
-						{% set divider = { padding: dividerPadding, size: dividerSize, color: dividerColor } %}
-						{% include './includes/partials/component-dividerLine.njk' %}
-						<!-- Module 2 - 2 Column Copy Left Image Right -->
-						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-							<tr>
-								<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-										<tr>
-											<th rowspan="2" valign="top" class="column">
-												<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-													<tr>
-														<td valign="top" style="padding: 0px 25px 0px 25px;"><img class="image100p" src="http://www.fillmurray.com/260/220" alt="Placeholder Image" width="260" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: 260px; border: 0; outline: none; display: block;" /></td>
-													</tr>
-												</table>
-											</th>
-											<th valign="top" class="mHide"><div style="margin: 0; padding: 0; font-size: 1px; line-height: 1px;">&nbsp;</div></th>
-										</tr>
-										<tr>
-											<th valign="top" class="column">
-												<!-- Column 1 of 2 Copy -->
-												<table width="100%" border="0" cellpadding="0" cellspacing="0">
-													<tr>
-														<td class="padT-35" valign="top" align="left" style="padding: 0px 25px 0px 25px;"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
-													</tr>
-													<tr>
-														<td valign="top" align="left" style="padding: 15px 25px 0px 25px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem!</p></td>
-													</tr>
-													<tr>
-														<td valign="top" align="left" style="padding: 30px 25px 0px 25px;">
-															<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
-																<tr>
-																	<td valign="top" align="left" style="font-size: 19px; mso-line-height-rule:exactly; line-height: 24px; font-family: Arial,Helvetica,sans-serif;"><a href="https://www.google.com" style="text-decoration: none; color: #bd262f;" target="_blank"><strong>Secondary CTA&nbsp;&nbsp;&rarr;</strong></a></td>
-																</tr>
-															</table>
-														</td>
-													</tr>
-												</table>
-											</th>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+					<tr>
+						<td align="center" bgcolor="#cccccc" style="padding: 20px;"><h1 style="Margin: 0; padding: 0; font-size: 28px; line-height: 35px;">{{title}}</h1></td>
+					</tr>
+				</table>
+				<!-- 2 Column Copy Right Image Left -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+					<tr>
+						<td valign="top" align="center" style="margin: 0 auto; padding: 30px 0px 30px 0px;">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+								<tr>
+									<th rowspan="2" valign="top" class="column">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; min-width: 100%;" role="presentation">
+											<tr>
+												<td valign="top" style="padding: 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><img class="image100p" src="http://www.fillmurray.com/{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}/220" alt="Placeholder Image" width="{% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}" height="200" border="0" vspace="0" hspace="0" style="font-size: 24px; font-family: Arial,Verdana,sans-serif; color: #000001; font-weight: bold; text-align: center; background-color:#cccccc; min-width: {% if columnImageWidth %}{{ columnImageWidth }}{% else %}{{ defaults.columnImageWidthDefault }}{% endif %}px; border: 0; outline: none; display: block;" /></td>
+											</tr>
+										</table>
+									</th>
+									<th valign="top" class="mHide"><div style="margin: 0; padding: 0; font-size: 1px; line-height: 1px;">&nbsp;</div></th>
+								</tr>
+								<tr>
+									<th valign="top" class="column">
+										<!-- Column 1 of 2 Copy -->
+										<table width="100%" border="0" cellpadding="0" cellspacing="0">
+											<tr>
+												<td class="padT-35" valign="top" align="left" style="padding: 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><h3 style="Margin:0; padding:0;font-size: 21px; mso-line-height-rule:exactly; line-height: 25px; font-family: Arial,Verdana,sans-serif; color:#000001; font-weight: bold;">Subheadline Placeholder</h3></td>
+											</tr>
+											<tr>
+												<td valign="top" align="left" style="padding: 15px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;"><p style="Margin:0;padding:0;font-size: 17px; mso-line-height-rule:exactly; line-height: 21px; font-family: Arial,Verdana,sans-serif; color:#000001;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam, quasi veniam excepturi exercitationem!</p></td>
+											</tr>
+											<tr>
+												<td valign="top" align="left" style="padding: 30px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px 0px {% if columnSideSpacing %}{{ columnSideSpacing }}{% else %}{{ defaults.columnSideSpacingDefault }}{% endif %}px;">
+													{% set secondaryCTA = { align: secondaryCTAAlign, decoration: secondaryCTADecoration, textColor: secondaryCTATextColor } %}
+													{% include './includes/partials/component-secondaryCTA.njk' %}
+												</td>
+											</tr>
+										</table>
+									</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
