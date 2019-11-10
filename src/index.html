@@ -1,0 +1,64 @@
+---
+layout: "layouts/home.njk"
+---
+
+<section>
+  <div class="row">
+    <div class="column">
+      <h2>Starter Shells</h2>
+      <ul class="pages">
+      {%- for shell in collections.shell -%}
+        <li><a href="{{ shell.url }}" target="_blank">{{ shell.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="column">
+      <h2>One Column Layouts</h2>
+      <ul class="pages">
+      {%- for 1col in collections.1col -%}
+        <li><a href="{{ 1col.url }}" target="_blank">{{ 1col.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="column">
+      <h2>Two Column Layouts</h2>
+      <ul class="pages">
+      {%- for 2col in collections.2col -%}
+        <li><a href="{{ 2col.url }}" target="_blank">{{ 2col.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="column">
+      <h2>Three Column Layouts</h2>
+      <ul class="pages">
+      {%- for 3col in collections.3col -%}
+        <li><a href="{{ 3col.url }}" target="_blank">{{ 3col.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="column">
+      <h2>Four Column Layouts</h2>
+      <ul class="pages">
+      {%- for 4col in collections.4col -%}
+        <li><a href="{{ 4col.url }}" target="_blank">{{ 4col.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
