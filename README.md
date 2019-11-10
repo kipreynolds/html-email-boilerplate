@@ -47,4 +47,4 @@ HTML email can be tough. This boilerplate template system makes that process a l
 * Office 365
 
 ## Technology
-Template system maintained and built with [Middleman](https://middlemanapp.com/).
+Template system maintained and built with [11ty](https://www.11ty.io/).
