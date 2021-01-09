@@ -9,6 +9,8 @@ HTML email can be tough. This boilerplate template system makes that process a l
 * Base elements that can be used across modules
 * Components include:
   * Divider line
+  * Primary Button CTA
+  * Secondary Text CTA
 
 ### Modules
 * Modules include variety of layouts comprised of components.
@@ -22,7 +24,7 @@ HTML email can be tough. This boilerplate template system makes that process a l
 
 ### Shell
 * Base shell contains wrapper content for email.
-* Include reset, desktop and mobile styles.
+* Includes reset, desktop and mobile styles.
 * Standard header and footer modules included.
 
 ## Rendering
